@@ -1,0 +1,2 @@
+# Buddy
+Perfect desktop assistant.
