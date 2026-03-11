@@ -108,3 +108,8 @@ class MainThread(QThread):
 #start function
         def TaskExecution(self):
             wishme()
+
+            while True:
+            #if 1:
+
+                self.query = self.takecommand()
