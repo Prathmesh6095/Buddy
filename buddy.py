@@ -66,3 +66,45 @@ def sendEmail(to,content):
     server.login('prathameshhatkar07@gmail.com','tkne adgo kwnp jwbt')
     server.sendmail('prathameshhatkar07@gmail.com',to,content)
     server.close()
+
+def pdf_reader():
+    pdf = open('Resume.pdf','rb')
+    pdfreader = PyPDF2.PdfFileReader(pdf)
+    pages = pdfreader.numPages
+    speak(f"Total numbers of pages in this pdf are {pages}")
+    speak("sir please enter the number of page i have to read.")
+    pg = int(input("Please enter the page number: "))
+    page = pdfreader.getPage(pg)
+    text = page.extractText()
+    speak(text)
+
+class MainThread(QThread):
+    def __init__(self):
+        super(MainThread,self).__init__()
+
+        #Multi-threading
+        def run(self):
+            self.TaskExecution
+        def takecommand(self):
+#it takes microphone input from input and returns strring output
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+                 print("Listening...")
+            r.pause_threshold = 1
+            audio = r.listen(source)
+
+            try:
+                print("Recognizing...")
+                query = r.recognize_google(audio,language='en-in')
+                print(f"User said:{query}")
+
+            except Exception as e:
+                #print(e)
+                print("Say that again please...")
+                return "None"
+            query = query.lower()
+            return query
+
+#start function
+        def TaskExecution(self):
+            wishme()
