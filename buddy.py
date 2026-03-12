@@ -159,3 +159,12 @@ class MainThread(QThread):
                     speak("Okay sir, closing excel")
                     os.system("taskkill /f /im EXCELS.EXE")
                     speak("Done sir.")
+
+                elif "take screenshot" in self.query or "take a screenshot" in self.query:
+                    speak("sir,please tell me the name for this screenshot file.")
+                    name = takecommand().lower()
+                    speak("please sir hold the screen for few seconds, i am taking screenshot")
+                    time.sleep(3)
+                    img = pyautogui.screenshot()
+                    img.save(f"{name}.png")
+                    speak("i am done sir, the screenshot has been saved in our main folder.")
