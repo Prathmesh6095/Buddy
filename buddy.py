@@ -148,3 +148,14 @@ class MainThread(QThread):
                     speak("Okay sir, closing powerpoint")
                     os.system("taskkill /f /im POWERPNT.EXE")
                     speak("Done sir.")
+
+                elif "open excel" in self.query:
+                    speak("sure sir, opening excel")
+                    wpath = "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE"
+                    os.startfile(wpath)
+                    speak("Done sir.")
+
+                elif "close excel" in self.query:
+                    speak("Okay sir, closing excel")
+                    os.system("taskkill /f /im EXCELS.EXE")
+                    speak("Done sir.")
