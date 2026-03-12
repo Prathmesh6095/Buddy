@@ -126,3 +126,14 @@ class MainThread(QThread):
                     speak("Okay sir, closing notepad")
                     os.system("taskkill /f /im notepad.exe")
                     speak("Done sir.")
+
+                elif "open microsoft word" in self.query:
+                    speak("sure sir")
+                    wpath = "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.exe"
+                    os.startfile(wpath)
+                    speak("Done sir.")
+
+                elif "close microsoft word" in self.query:
+                    speak("Okay sir, closing word")
+                    os.system("taskkill /f /im WINWORD.exe")
+                    speak("Done sir.")
