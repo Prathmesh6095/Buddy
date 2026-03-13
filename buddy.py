@@ -189,3 +189,10 @@ class MainThread(QThread):
                     pyautogui.press("Esc")
                     time.sleep(1)
                     speak("Done sir.")
+
+                elif "play music" in self.query:
+                    music_dir = "D:\\music"
+                    songs = os.listdir(music_dir)
+                    rd = random.choice(songs)
+                    os.startfile(os.path.join(music_dir, rd))
+                    speak("Done sir.")
