@@ -196,3 +196,7 @@ class MainThread(QThread):
                     rd = random.choice(songs)
                     os.startfile(os.path.join(music_dir, rd))
                     speak("Done sir.")
+
+                elif "tell me a joke" in self.query:
+                    joke = pyjokes.get_joke()
+                    speak(joke)
