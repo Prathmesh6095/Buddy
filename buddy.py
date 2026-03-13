@@ -172,3 +172,15 @@ class MainThread(QThread):
                 elif "open command prompt" in self.query:
                     os.system('start cmd')
                     speak("Done sir.")
+
+                elif "open camera" in self.query:
+                    cap = cv2.VideoCapture(0)
+                    while True:
+                        ret, img = cap.read()
+                        cv2.imshow('webcam',img)
+                        k = cv2.waitKey(50)
+                        if k==27:
+                            break;
+                    cap.release()
+                    cv2.destroyAllWindows()
+                    speak("Done sir.")
