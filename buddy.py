@@ -200,3 +200,7 @@ class MainThread(QThread):
                 elif "tell me a joke" in self.query:
                     joke = pyjokes.get_joke()
                     speak(joke)
+
+                elif "ip address" in self.query:
+                    ip = get('https://api.ipify.org').text
+                    speak(f"your IP address is {ip}")
