@@ -184,3 +184,8 @@ class MainThread(QThread):
                     cap.release()
                     cv2.destroyAllWindows()
                     speak("Done sir.")
+
+                elif "close camera" in self.query:
+                    pyautogui.press("Esc")
+                    time.sleep(1)
+                    speak("Done sir.")
