@@ -168,3 +168,7 @@ class MainThread(QThread):
                     img = pyautogui.screenshot()
                     img.save(f"{name}.png")
                     speak("i am done sir, the screenshot has been saved in our main folder.")
+
+                elif "open command prompt" in self.query:
+                    os.system('start cmd')
+                    speak("Done sir.")
