@@ -216,4 +216,4 @@ class MainThread(QThread):
                 
                 elif "open facebook" in self.query:
                     webbrowser.open("www.facebook.com")
-                    speak("Done sir.")
+                    speak("Done sir..")
