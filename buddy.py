@@ -211,3 +211,9 @@ class MainThread(QThread):
                     results = wikipedia.summary(self.query, sentences=2)
                     speak("According to wikipedia")
                     speak(results)
+
+         #----------To check socialmedia----------#
+                
+                elif "open facebook" in self.query:
+                    webbrowser.open("www.facebook.com")
+                    speak("Done sir.")
