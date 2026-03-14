@@ -223,3 +223,9 @@ class MainThread(QThread):
                     yt = takecommand().lower()
                     kit.playonyt(f"{yt}")
                     speak("Done sir.")
+
+                elif "open google" in self.query:
+                    speak("Sir, what would you like to search?")
+                    cm = takecommand().lower()
+                    webbrowser.open(f"{cm}")
+                    speak("Done sir.")
