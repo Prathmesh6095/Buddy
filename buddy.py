@@ -228,4 +228,4 @@ class MainThread(QThread):
                     speak("Sir, what would you like to search?")
                     cm = takecommand().lower()
                     webbrowser.open(f"{cm}")
-                    speak("Done sir.")
+                    speak("Done sir...")
