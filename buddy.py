@@ -235,3 +235,8 @@ class MainThread(QThread):
                     apath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
                     os.startfile(apath)
                     speak("Done sir...")
+
+                elif "close chrome" in self.query:
+                    speak("Okay sir, closing chrome")
+                    os.system("taskkill /f /im chrome.exe")
+                    speak("Done sir.")
