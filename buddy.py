@@ -229,3 +229,9 @@ class MainThread(QThread):
                     cm = takecommand().lower()
                     webbrowser.open(f"{cm}")
                     speak("Done sir...")
+
+                elif "open chrome" in self.query:
+                    speak("opening sir")
+                    apath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+                    os.startfile(apath)
+                    speak("Done sir.")
