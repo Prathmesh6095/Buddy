@@ -239,4 +239,4 @@ class MainThread(QThread):
                 elif "close chrome" in self.query:
                     speak("Okay sir, closing chrome")
                     os.system("taskkill /f /im chrome.exe")
-                    speak("Done sir.")
+                    speak("Done sir...")
