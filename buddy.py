@@ -117,7 +117,7 @@ class MainThread(QThread):
                 #logic building for task
         #----------To perform specific tasks----------#
                 
-                if "open notepad" in self.query:
+                if "open notepad" in self.query or "open the notepad" in self.query:
                     npath = "C:\\Windows\\notepad.exe"
                     os.startfile(npath)
                     speak("Done sir.")
