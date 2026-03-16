@@ -241,7 +241,7 @@ class MainThread(QThread):
                     os.system("taskkill /f /im chrome.exe")
                     speak("Done sir..")
 
-                elif "switch the window " in self.query:
+                elif "switch the window " in self.query or "switch window" in self.query:
                     pyautogui.keyDown("alt")
                     pyautogui.press("tab")
                     time.sleep(1)
