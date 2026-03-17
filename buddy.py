@@ -144,7 +144,7 @@ class MainThread(QThread):
                     os.startfile(wpath)
                     speak("Done sir.")
 
-                elif "close powerpoint" in self.query:
+                elif "close powerpoint" in self.query or "close the powerpoint" in self.query:
                     speak("Okay sir, closing powerpoint")
                     os.system("taskkill /f /im POWERPNT.EXE")
                     speak("Done sir.")
