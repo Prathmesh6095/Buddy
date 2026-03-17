@@ -122,7 +122,7 @@ class MainThread(QThread):
                     os.startfile(npath)
                     speak("Done sir.")
 
-                elif "close notepad" in self.query:
+                elif "close notepad" in self.query or "close notepad" in self.query:
                     speak("Okay sir, closing notepad")
                     os.system("taskkill /f /im notepad.exe")
                     speak("Done sir.")
