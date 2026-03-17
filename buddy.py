@@ -133,7 +133,7 @@ class MainThread(QThread):
                     os.startfile(wpath)
                     speak("Done sir.")
 
-                elif "close microsoft word" in self.query:
+                elif "close microsoft word" in self.query or "close the microsoft word" in self.query:
                     speak("Okay sir, closing word")
                     os.system("taskkill /f /im WINWORD.exe")
                     speak("Done sir.")
