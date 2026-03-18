@@ -155,7 +155,7 @@ class MainThread(QThread):
                     os.startfile(wpath)
                     speak("Done sir.")
 
-                elif "close excel" in self.query or "close the excel" in self.query:
+                elif "close excel" in self.query or "close the excel " in self.query:
                     speak("Okay sir, closing excel")
                     os.system("taskkill /f /im EXCELS.EXE")
                     speak("Done sir.")
