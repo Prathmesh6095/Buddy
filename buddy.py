@@ -149,7 +149,7 @@ class MainThread(QThread):
                     os.system("taskkill /f /im POWERPNT.EXE")
                     speak("Done sir.")
 
-                elif "open excel" in self.query:
+                elif "open excel" in self.query or "open the excel" in self.query:
                     speak("sure sir, opening excel")
                     wpath = "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE"
                     os.startfile(wpath)
