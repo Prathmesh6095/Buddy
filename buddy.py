@@ -160,7 +160,7 @@ class MainThread(QThread):
                     os.system("taskkill /f /im EXCELS.EXE")
                     speak("Done sir.")
 
-                elif "take screenshot" in self.query or "take a screenshot" in self.query:
+                elif "take screenshot" in self.query or "take a screenshot " in self.query:
                     speak("sir,please tell me the name for this screenshot file.")
                     name = takecommand().lower()
                     speak("please sir hold the screen for few seconds, i am taking screenshot")
