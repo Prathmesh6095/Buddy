@@ -173,7 +173,7 @@ class MainThread(QThread):
                     os.system('start cmd')
                     speak("Done sir.")
 
-                elif "open camera" in self.query:
+                elif "open camera " in self.query:
                     cap = cv2.VideoCapture(0)
                     while True:
                         ret, img = cap.read()
