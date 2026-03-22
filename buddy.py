@@ -185,7 +185,7 @@ class MainThread(QThread):
                     cv2.destroyAllWindows()
                     speak("Done sir.")
 
-                elif "close camera" in self.query:
+                elif "close camera " in self.query:
                     pyautogui.press("Esc")
                     time.sleep(1)
                     speak("Done sir.")
