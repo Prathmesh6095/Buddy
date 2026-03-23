@@ -190,7 +190,7 @@ class MainThread(QThread):
                     time.sleep(1)
                     speak("Done sir.")
 
-                elif "play music" in self.query:
+                elif "play music " in self.query:
                     music_dir = "D:\\music"
                     songs = os.listdir(music_dir)
                     rd = random.choice(songs)
