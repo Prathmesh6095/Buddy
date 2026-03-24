@@ -190,14 +190,14 @@ class MainThread(QThread):
                     time.sleep(1)
                     speak("Done sir.")
 
-                elif "play music " in self.query:
+                elif "play music " in self.query or "play the music " in self.query:
                     music_dir = "D:\\music"
                     songs = os.listdir(music_dir)
                     rd = random.choice(songs)
                     os.startfile(os.path.join(music_dir, rd))
                     speak("Done sir.")
 
-                elif "tell me a joke" in self.query:
+                elif "tell me a joke " in self.query:
                     joke = pyjokes.get_joke()
                     speak(joke)
 
