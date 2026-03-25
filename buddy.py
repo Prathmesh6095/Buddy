@@ -197,11 +197,11 @@ class MainThread(QThread):
                     os.startfile(os.path.join(music_dir, rd))
                     speak("Done sir.")
 
-                elif "tell me a joke " in self.query:
+                elif "tell me a joke " in self.query or "tell me the joke " in self.query:
                     joke = pyjokes.get_joke()
                     speak(joke)
 
-                elif "ip address" in self.query:
+                elif "ip address " in self.query:
                     ip = get('https://api.ipify.org').text
                     speak(f"your IP address is {ip}")
 
