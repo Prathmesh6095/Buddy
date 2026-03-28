@@ -205,7 +205,7 @@ class MainThread(QThread):
                     ip = get('https://api.ipify.org').text
                     speak(f"your IP address is {ip}")
 
-                elif "wikipedia" in self.query or "open wikipedia" in self.query:
+                elif "wikipedia " in self.query or "open wikipedia" in self.query:
                     speak("Searching wikipedia....")
                     self.query = self.query.replace("wikipedia","")
                     results = wikipedia.summary(self.query, sentences=2)
