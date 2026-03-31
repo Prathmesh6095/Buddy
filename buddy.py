@@ -214,7 +214,7 @@ class MainThread(QThread):
 
          #----------To check socialmedia----------#
                 
-                elif "open facebook" in self.query:
+                elif "open facebook" in self.query or "open the facebook " in self.query:
                     webbrowser.open("www.facebook.com")
                     speak("Done sir..")
 
