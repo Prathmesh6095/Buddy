@@ -218,7 +218,7 @@ class MainThread(QThread):
                     webbrowser.open("www.facebook.com")
                     speak("Done sir..")
 
-                elif "open youtube" in self.query:
+                elif "open youtube " in self.query:
                     speak("Sir what would you like to see?")
                     yt = takecommand().lower()
                     kit.playonyt(f"{yt}")
